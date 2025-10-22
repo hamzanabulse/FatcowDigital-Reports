@@ -50,6 +50,12 @@ export default function DashboardLayout({
                 >
                   Archive
                 </Link>
+                <Link
+                  href="/dashboard/settings"
+                  className="text-gray-300 hover:text-fatcow-green px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                  Settings
+                </Link>
               </div>
             </div>
 
