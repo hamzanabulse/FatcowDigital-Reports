@@ -34,10 +34,10 @@ export default function LoginPage() {
         <div className="bg-white rounded-2xl shadow-2xl p-8">
           {/* Logo */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-fatcow-green rounded-full mb-4">
-              <span className="text-4xl font-bold text-white">F</span>
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 overflow-hidden">
+              <img src="/fatcowdigital-logo.webp" alt="fatcowdigital logo" className="w-20 h-20 object-contain" />
             </div>
-            <h1 className="text-3xl font-bold text-fatcow-navy">fatcowdigital</h1>
+            <h1 className="text-3xl font-bold text-fatcow-navy lowercase">fatcowdigital</h1>
             <p className="text-gray-600 mt-2">Secure Client Reports</p>
           </div>
 

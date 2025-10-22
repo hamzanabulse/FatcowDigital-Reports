@@ -28,10 +28,10 @@ export default function DashboardLayout({
             <div className="flex items-center">
               {/* Logo */}
               <div className="flex-shrink-0 flex items-center">
-                <div className="w-10 h-10 bg-fatcow-green rounded-full flex items-center justify-center">
-                  <span className="text-xl font-bold text-white">F</span>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+                  <img src="/fatcowdigital-logo.webp" alt="fatcowdigital logo" className="w-10 h-10 object-contain" />
                 </div>
-                <span className="ml-3 text-white text-xl font-bold">
+                <span className="ml-3 text-white text-xl font-bold lowercase">
                   fatcowdigital
                 </span>
               </div>
