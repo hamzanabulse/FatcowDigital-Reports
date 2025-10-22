@@ -1,0 +1,57 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to get client ID for authenticated user
+    function getClientId() {
+      return get(/databases/$(database)/documents/clients/$(request.auth.uid)).data.clientId;
+    }
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Client profile documents
+    match /clients/{userId} {
+      // Users can only read their own profile
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+      // Only admins can write (handled via Cloud Functions)
+      allow write: if false;
+    }
+    
+    // Monthly report summaries
+    match /reports_summary/{reportId} {
+      allow read: if isAuthenticated() && 
+                   resource.data.client_id == getClientId();
+      // Only Cloud Functions can write
+      allow write: if false;
+    }
+    
+    // Monthly detailed data
+    match /reports_monthly/{reportId} {
+      allow read: if isAuthenticated() && 
+                   resource.data.client_id == getClientId();
+      allow write: if false;
+    }
+    
+    // Annual report data
+    match /reports_annual/{reportId} {
+      allow read: if isAuthenticated() && 
+                   resource.data.client_id == getClientId();
+      allow write: if false;
+    }
+    
+    // Query-level data
+    match /reports_queries/{reportId} {
+      allow read: if isAuthenticated() && 
+                   resource.data.client_id == getClientId();
+      allow write: if false;
+    }
+    
+    // Admin-only collections (for internal use)
+    match /admin/{document=**} {
+      allow read, write: if false; // Only accessible via Cloud Functions
+    }
+  }
+}

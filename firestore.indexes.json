@@ -1,0 +1,55 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "reports_summary",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "client_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "report_date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "reports_monthly",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "client_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "year",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "month",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "reports_queries",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "client_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "report_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "clicks",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
