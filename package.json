@@ -1,7 +1,7 @@
 {
   "name": "fatcow-digital-reports",
   "version": "1.0.0",
-  "description": "Secure Interactive Reporting Platform for FatCow Digital",
+  "description": "Secure Interactive Reporting Platform for fatcowdigital",
   "private": true,
   "scripts": {
     "dev": "next dev",

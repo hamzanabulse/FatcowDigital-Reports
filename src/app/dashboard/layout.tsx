@@ -32,7 +32,7 @@ export default function DashboardLayout({
                   <span className="text-xl font-bold text-white">F</span>
                 </div>
                 <span className="ml-3 text-white text-xl font-bold">
-                  FatCow Digital
+                  fatcowdigital
                 </span>
               </div>
               
@@ -132,7 +132,7 @@ export default function DashboardLayout({
       <footer className="bg-white border-t border-gray-200 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <p className="text-center text-sm text-gray-600">
-            © 2025 FatCow Digital. All rights reserved. | Secure Reports Platform
+            © 2025 fatcowdigital. All rights reserved. | Secure Reports Platform
           </p>
         </div>
       </footer>

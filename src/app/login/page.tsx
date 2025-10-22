@@ -37,7 +37,7 @@ export default function LoginPage() {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-fatcow-green rounded-full mb-4">
               <span className="text-4xl font-bold text-white">F</span>
             </div>
-            <h1 className="text-3xl font-bold text-fatcow-navy">FatCow Digital</h1>
+            <h1 className="text-3xl font-bold text-fatcow-navy">fatcowdigital</h1>
             <p className="text-gray-600 mt-2">Secure Client Reports</p>
           </div>
 
@@ -94,7 +94,7 @@ export default function LoginPage() {
         </div>
 
         <div className="mt-8 text-center text-sm text-white">
-          <p>© 2025 FatCow Digital. All rights reserved.</p>
+          <p>© 2025 fatcowdigital. All rights reserved.</p>
         </div>
       </div>
     </div>

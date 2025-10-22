@@ -6,7 +6,7 @@ import { AuthProvider } from '@/contexts/AuthContext';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'FatCow Digital Reports',
+  title: 'fatcowdigital Reports',
   description: 'Secure Interactive Reporting Platform',
 };
 

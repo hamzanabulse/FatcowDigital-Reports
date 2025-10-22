@@ -6,6 +6,8 @@ export interface ClientProfile {
   contactName: string;
   createdAt: Date;
   lastReportDate?: string;
+  gsc_property_url?: string; // Google Search Console property URL
+  gsc_refresh_token?: string; // OAuth refresh token for GSC API
 }
 
 // Monthly Report Summary
@@ -114,4 +116,44 @@ export interface KPICard {
   changeLabel?: string;
   icon?: string;
   format?: 'number' | 'percentage' | 'decimal';
+}
+
+// AI Insights
+export interface AIInsight {
+  type: 'success' | 'warning' | 'critical' | 'info';
+  metric: string;
+  message: string;
+}
+
+export interface AIRecommendation {
+  priority: 'high' | 'medium' | 'low';
+  category: string;
+  action: string;
+  expected_impact: string;
+}
+
+export interface MetricTrend {
+  trend?: string;
+  percentage?: number;
+  current?: number;
+  status: 'good' | 'bad' | 'neutral' | 'needs_improvement';
+}
+
+export interface AIInsightsData {
+  overall_analysis: string;
+  key_insights: AIInsight[];
+  recommendations: AIRecommendation[];
+  predictions: {
+    next_month_clicks: number;
+    next_month_impressions: number;
+    expected_ctr: number;
+    confidence: string;
+  };
+  priority_actions: string[];
+  metric_trends: {
+    clicks: MetricTrend;
+    impressions: MetricTrend;
+    ctr: MetricTrend;
+    position: MetricTrend;
+  };
 }
